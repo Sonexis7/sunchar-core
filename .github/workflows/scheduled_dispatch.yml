@@ -1,0 +1,27 @@
+name: Scheduled Carbon Arbitrage Dispatch
+
+on:
+  schedule:
+    - cron: '0 3,15 * * *'  # Runs daily at 03:00 and 15:00 UTC
+  workflow_dispatch:        # Allows manual trigger via GitHub Actions UI
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Execute Workload Dispatch
+        env:
+          GREENOPS_API_KEY: ${{ secrets.GREENOPS_API_KEY }}
+          GREENOPS_BASE_URL: https://greenops-engine.onrender.com
+        run: python run_workload.py

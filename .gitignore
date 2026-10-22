@@ -1,0 +1,21 @@
+﻿# Environments & Cache
+venv/
+*.pyc
+__pycache__/
+
+# Secrets & Environment Variables
+.env
+*.pem
+credentials.json
+
+# Local Data Artifacts & DuckDB
+*.duckdb
+*.duckdb.wal
+data/
+
+# IDE & OS files
+.vscode/
+.idea/
+.DS_Store
+
+*.egg-info/

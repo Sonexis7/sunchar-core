@@ -1,0 +1,13 @@
+﻿venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.git/
+.gitignore
+tests/
+*.pdf
+data/ledgers/*.duckdb
+data/ledgers/*.duckdb.wal
+data/keys/engine_ed25519.pem

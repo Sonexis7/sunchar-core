@@ -1,0 +1,17 @@
+﻿services:
+  greenops-engine:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: greenops-enterprise-engine
+    ports:
+      - "8000:8000"
+    environment:
+      - GREENOPS_ENV=production
+      - GREENOPS_JWT_SECRET=production-secret-token-please-override-via-vault
+      - GREENOPS_WORM_BUCKET=greenops-statutory-worm-ledger
+    volumes:
+      - ./data/ledgers:/app/data/ledgers
+      - ./data/worm_archive:/app/data/worm_archive
+      - ./data/keys:/app/data/keys
+    restart: unless-stopped

@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "greenops-client"
+version = "0.1.0"
+description = "Autonomous carbon-aware compute scheduling and Scope 2 audit ledger for enterprise data pipelines."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+"requests>=2.28.0"
+]
+
+[tool.setuptools.packages.find]
+include = ["greenops*"]
