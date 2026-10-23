@@ -4,14 +4,14 @@ from fastapi import FastAPI, Depends, HTTPException, status
 from fastapi.responses import FileResponse, PlainTextResponse
 from pydantic import BaseModel, Field
 
-from greenops.telemetry.collector import DualStreamTelemetryCollector
-from greenops.engine.gating import GatingEvaluator, GatingRequest
-from greenops.engine.attestation import HypervisorAttestor, ComputeTelemetryAttestationRequest
-from greenops.ledger.tenant_db import get_tenant_db, archive_worm_block
-from greenops.ledger.merkle import SettlementMerkleTree, sha256_hash
-from greenops.security.kms_signer import CloudKMSSigner
-from greenops.security.auth import get_current_tenant
-from greenops.audit.generator import AuditPackGenerator
+from sunchar_core.telemetry.collector import DualStreamTelemetryCollector
+from sunchar_core.engine.gating import GatingEvaluator, GatingRequest
+from sunchar_core.engine.attestation import HypervisorAttestor, ComputeTelemetryAttestationRequest
+from sunchar_core.ledger.tenant_db import get_tenant_db, archive_worm_block
+from sunchar_core.ledger.merkle import SettlementMerkleTree, sha256_hash
+from sunchar_core.security.kms_signer import CloudKMSSigner
+from sunchar_core.security.auth import get_current_tenant
+from sunchar_core.audit.generator import AuditPackGenerator
 
 app = FastAPI(
     title="Sunchar Core",

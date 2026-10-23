@@ -1,16 +1,27 @@
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "greenops-client"
+name = "sunchar-core"
 version = "0.1.0"
-description = "Autonomous carbon-aware compute scheduling and Scope 2 audit ledger for enterprise data pipelines."
+description = "Lightweight, carbon-aware batch compute scheduler and UK National Grid telemetry engine"
 readme = "README.md"
+license = "Apache-2.0"
 requires-python = ">=3.9"
+authors = [
+    { name = "Emmanuel Sunday", email = "sonexis7@gmail.com" }
+]
 dependencies = [
-"requests>=2.28.0"
+    "httpx>=0.24.0",
+    "pydantic>=2.0.0"
 ]
 
+[project.urls]
+Homepage = "https://github.com/Sonexis7/sunchar-core"
+Repository = "https://github.com/Sonexis7/sunchar-core.git"
+
 [tool.setuptools.packages.find]
-include = ["greenops*"]
+where = ["."]
+include = ["sunchar_core*"]
+exclude = ["tests*", "examples*", "scripts*"]

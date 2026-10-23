@@ -1,5 +1,5 @@
-﻿"""
-Example Apache Airflow DAG demonstrating GreenOps integration.
+"""
+Example Apache Airflow DAG demonstrating sunchar_core integration.
 Place this file into your Airflow dags/ folder.
 """
 from datetime import datetime, timedelta
@@ -26,7 +26,7 @@ with DAG(
     default_args=default_args,
     schedule_interval="0 3,15 * * *",
     catchup=False,
-    tags=["greenops", "esg", "finops"]
+    tags=["sunchar_core", "esg", "finops"]
 ) as dag:
 
     # 1. Airflow Sensor: Wait for clean grid window

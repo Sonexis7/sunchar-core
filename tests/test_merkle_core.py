@@ -1,6 +1,6 @@
-﻿import uuid
+import uuid
 from datetime import datetime, timezone
-from greenops.ledger.merkle import SettlementMerkleTree, sha256_hash
+from sunchar_core.ledger.merkle import SettlementMerkleTree, sha256_hash
 
 def test_merkle_execution_and_proof():
     # Simulate 4 parallel batch executions finishing in the same settlement window

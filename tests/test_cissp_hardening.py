@@ -1,11 +1,11 @@
-﻿import os
+import os
 import uuid
 from datetime import datetime, timezone
 from fastapi.testclient import TestClient
 
-from greenops.main import app
-from greenops.security.auth import issue_tenant_token
-from greenops.security.pki import EngineSigner
+from sunchar_core.main import app
+from sunchar_core.security.auth import issue_tenant_token
+from sunchar_core.security.pki import EngineSigner
 
 client = TestClient(app)
 

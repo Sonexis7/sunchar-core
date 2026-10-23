@@ -1,4 +1,4 @@
-﻿"""
+"""
 Multi-Tenant Weekly Monday Savings Digest:
 Iterates through all active enterprise tenants, fetches their isolated Scope 2
 audit numbers, and formats client-specific ROI snapshots.
@@ -6,7 +6,7 @@ audit numbers, and formats client-specific ROI snapshots.
 import os
 import requests
 
-BASE_URL = os.getenv("GREENOPS_BASE_URL", "https://greenops-engine.onrender.com").rstrip("/")
+BASE_URL = os.getenv("GREENOPS_BASE_URL", "https://sunchar_core-engine.onrender.com").rstrip("/")
 ADMIN_KEY = os.getenv("GREENOPS_API_KEY", "dev_secret_key_12345")
 WEBHOOK_URL = os.getenv("GREENOPS_WEBHOOK_URL")
 
@@ -46,7 +46,7 @@ def run_multi_tenant_digest():
         efficiency = summary.get("emissions_reduction_efficiency", "100%")
 
         card_text = (
-            f"💰 *Weekly GreenOps Arbitrage & ESG Digest: {client_name}*\n\n"
+            f"💰 *Weekly sunchar_core Arbitrage & ESG Digest: {client_name}*\n\n"
             f"• *Optimized Workloads:* {workloads} jobs\n"
             f"• *Total Compute Energy:* {energy_kwh} kWh\n"
             f"• *Net Financial Savings:* £{savings_gbp:.2f} GBP\n"

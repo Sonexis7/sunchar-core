@@ -1,9 +1,9 @@
-﻿import uuid
+import uuid
 from fastapi.testclient import TestClient
-from greenops.main import app
-from greenops.security.auth import issue_tenant_token
-from greenops.security.kms_signer import CloudKMSSigner
-from greenops.security.pki import EngineSigner
+from sunchar_core.main import app
+from sunchar_core.security.auth import issue_tenant_token
+from sunchar_core.security.kms_signer import CloudKMSSigner
+from sunchar_core.security.pki import EngineSigner
 
 client = TestClient(app)
 

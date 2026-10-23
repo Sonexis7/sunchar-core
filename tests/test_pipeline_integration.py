@@ -1,8 +1,8 @@
-﻿import uuid
+import uuid
 from datetime import datetime, timedelta, timezone
-from greenops.telemetry.collector import DualStreamTelemetryCollector
-from greenops.engine.gating import GatingEvaluator, GatingRequest
-from greenops.ledger.database import init_ledger_db
+from sunchar_core.telemetry.collector import DualStreamTelemetryCollector
+from sunchar_core.engine.gating import GatingEvaluator, GatingRequest
+from sunchar_core.ledger.database import init_ledger_db
 
 def test_full_pipeline_flow():
     print("\n--- 1. Testing Live Dual Telemetry Fetch ---")

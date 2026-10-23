@@ -1,7 +1,7 @@
-﻿import uuid
+import uuid
 from datetime import datetime, timezone
-from greenops.main import app
-from greenops.security.auth import issue_tenant_token
+from sunchar_core.main import app
+from sunchar_core.security.auth import issue_tenant_token
 from fastapi.testclient import TestClient
 
 client = TestClient(app)
@@ -12,7 +12,7 @@ def run_e2e_commercial_demo():
     auth_headers = {"Authorization": f"Bearer {token}"}
 
     print("\n=======================================================")
-    print("  RUNNING GREENOPS v0.2.0 END-TO-END COMMERCIAL SUITE  ")
+    print("  RUNNING sunchar_core v0.2.0 END-TO-END COMMERCIAL SUITE  ")
     print("=======================================================\n")
 
     # 1. Health & Live Telemetry

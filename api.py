@@ -194,7 +194,7 @@ def health_check():
     backend_status = "MotherDuck Cloud" if MOTHERDUCK_TOKEN else "Local In-Memory DuckDB"
     return {
         "status": "healthy",
-        "service": "greenops-multitenant-engine",
+        "service": "sunchar_core-multitenant-engine",
         "data_backend": backend_status
     }
 

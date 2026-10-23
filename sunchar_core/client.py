@@ -12,7 +12,7 @@ class GreenOpsClient:
         webhook_url: Optional[str] = None,
         request_timeout: int = 60
     ):
-        self.base_url = (base_url or os.getenv("GREENOPS_BASE_URL", "https://greenops-engine.onrender.com")).rstrip("/")
+        self.base_url = (base_url or os.getenv("GREENOPS_BASE_URL", "https://sunchar_core-engine.onrender.com")).rstrip("/")
         self.api_key = api_key or os.getenv("GREENOPS_API_KEY", "dev_secret_key_12345")
         self.webhook_url = webhook_url or os.getenv("GREENOPS_WEBHOOK_URL")
         self.request_timeout = request_timeout

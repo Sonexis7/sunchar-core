@@ -3,7 +3,7 @@ from client import GreenOpsClient
 
 # Initialize GreenOps Client with the Apex Financial Cloud API key
 client = GreenOpsClient(
-    base_url="https://greenops-engine.onrender.com",
+    base_url="https://sunchar_core-engine.onrender.com",
     api_key="gop_live_8354a340fc001439726f2a9c8a62ac58"
 )
 

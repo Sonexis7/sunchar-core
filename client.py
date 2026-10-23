@@ -1,7 +1,7 @@
 ﻿"""
 Backward-compatibility shim.
-Directs imports from root client.py to the packaged greenops library.
+Directs imports from root client.py to the packaged sunchar_core library.
 """
-from greenops import GreenOpsClient, GreenOpsAirflowSensor
+from sunchar_core import GreenOpsClient, GreenOpsAirflowSensor
 
 __all__ = ["GreenOpsClient", "GreenOpsAirflowSensor"]
